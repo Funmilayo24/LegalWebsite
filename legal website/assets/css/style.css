@@ -1,0 +1,426 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url('frankfurt.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% of the viewport height for full-screen */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent background for text */
+    padding: 20px;
+    width: 50%; /* Adjust as needed for the text width */
+}
+
+.hero-text {
+    padding-left: 30px;
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.services, .about, .contact, .appointment {
+    padding: 25px 0;
+}
+
+.appointment p {
+    text-align: center;
+}
+
+.about {
+    background-color: #222;
+    color: #fff;
+}
+
+.about p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.contact {
+    background-color: #222;
+    color: #fff;
+}
+
+.contact p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact strong {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.services strong {
+    font-weight: bold;
+}
+
+.about img, .contact img, .services img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.about img:hover, .contact img:hover, .services img:hover {
+    transform: scale(1.05);
+}
+
+.about p, .contact p, .services p {
+    font-size: 18px;
+    margin: 20px 0;
+    transition: color 0.3s;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content-image, .content-text {
+    flex-basis: 45%; /* Adjust the width of columns as needed */
+}
+
+.about .content-image,
+.contact .content-image {
+    order: 2; /* Image on the right */
+}
+
+.about .content-text,
+.contact .content-text {
+    order: 1; /* Text on the left */
+}
+
+.services .content-image {
+    order: 1; /* Image on the left */
+}
+
+.services .content-text {
+    order: 2; /* Text on the right */
+}
+
+.scroll-animate-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.contact-part {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.contact-part h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-part p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.scroll-animate-section.active .contact-part {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reviews {
+    padding: 40px 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.review-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.review-slide {
+    display: none;
+    padding: 20px;
+}
+
+.customer-info h3 {
+    font-size: 24px;
+}
+
+/* Use FontAwesome for star icons */
+.star-rating .fa {
+    color: #ff6600;
+    font-size: 24px;
+}
+
+.star-rating .checked {
+    color: #ffcc00;
+}
+
+
+.review-navigation {
+    text-align: center;
+}
+
+button.prev-slide, button.next-slide {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button.prev-slide:hover, button.next-slide:hover {
+    background-color: #e65500;
+}
+
+.contact {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-form {
+    width: 45%; /* Adjust the width as needed */
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-image {
+    width: 45%; /* Adjust the width as needed */
+    margin-right: 20px; /* Add margin for spacing */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact-form button:hover {
+    background-color: #e65500;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.footer-left,
+.footer-right {
+    width: 48%; /* Adjust the width as needed */
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+@media (min-width:1024px)  {
+    .hero-content {
+        width: 40%; /* Adjust as needed for the text width */
+    }
+}
+/* Styles for Mobile (Less than 768px) */
+@media (max-width: 767px) {
+    .content-container {
+        flex-direction: column; /* Stack content vertically for mobile */
+    }
+    
+    .content-image,
+    .content-text {
+        order: 1; /* Images on top for mobile */
+        flex-basis: 100%; /* Full width for mobile */
+    }
+
+    .scroll-animate-section {
+        display: flex;
+        flex-direction: column; /* Stack content vertically for mobile */
+        align-items: center; /* Center content items for mobile */
+        overflow: hidden;
+    }
+    .hero-content {
+        padding: 0;
+        width: 100%;
+    }
+    .hero {
+        height: 70vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack elements vertically on mobile */
+    }
+
+    .contact-image {
+        width: 100%; /* Full width for image on mobile */
+        margin-right: 0; /* Remove margin on mobile */
+        margin-bottom: 20px; /* Add margin between image and form on mobile */
+    }
+
+    .contact-form {
+        width: 100%; /* Full width for form on mobile */
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
